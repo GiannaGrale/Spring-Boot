@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="spring-boot" parallel="tests">
-    <test name="test-1">
+<!--    <test name="test-1">
         <classes>
             <class name="com.udemy.spring.selenium.Google1Test"/>
         </classes>
@@ -8,6 +8,14 @@
     <test name="test-2">
         <classes>
             <class name="com.udemy.spring.selenium.Google2Test"/>
+        </classes>
+    </test>-->
+
+    <test name="test-3">
+        <parameter name="dobFrom" value="1995-01-01"/>
+        <parameter name="dobTo" value="1999-01-01"/>
+        <classes>
+            <class name="com.udemy.spring.visa.UserVisaTest"/>
         </classes>
     </test>
 </suite>

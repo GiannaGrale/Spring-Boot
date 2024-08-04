@@ -11,11 +11,11 @@ public class SpringBaseTest extends AbstractTestNGSpringContextTests {
     @Autowired
     protected WebDriver driver;
 
-    @AfterMethod
+/*    @AfterMethod
     public void closeBrowser() {
         if (driver != null) {
             driver.close();
             driver.quit();
         }
-    }
+    }*/
 }

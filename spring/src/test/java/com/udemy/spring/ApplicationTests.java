@@ -9,7 +9,6 @@ import java.util.List;
 
 @SpringBootTest
 class ApplicationTests {
-
     @Autowired
     private User user;
 

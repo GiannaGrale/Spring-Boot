@@ -21,15 +21,19 @@ public class ScreenshotService {
     @Autowired
     private ApplicationContext ctx;
 
-    @Value("${screenshot_path}")
+    @Value("${screenshot.path}")
     private Path path;
 
     @Autowired
     private Faker faker;
 
-    public void takeScreenshot(String imgFormat) throws IOException {
+    public void takeScreenShot() throws IOException {
         File sourceFile = this.ctx.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.FILE);
-        FileCopyUtils.copy(sourceFile, this.path.resolve(faker.name().firstName() + imgFormat).toFile());
+        FileCopyUtils.copy(sourceFile, this.path.resolve(faker.name().firstName() + ".png").toFile());
+    }
+
+    public byte[] getScreenshot(){
+        return this.ctx.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.BYTES);
     }
 }
 
