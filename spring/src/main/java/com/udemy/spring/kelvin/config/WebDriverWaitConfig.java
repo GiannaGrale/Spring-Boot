@@ -1,5 +1,6 @@
 package com.udemy.spring.kelvin.config;
 
+
 import com.udemy.spring.kelvin.annotation.LazyConfiguration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;

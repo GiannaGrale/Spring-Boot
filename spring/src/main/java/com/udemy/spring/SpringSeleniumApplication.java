@@ -6,10 +6,9 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 
 
 @SpringBootApplication(exclude = MongoAutoConfiguration.class)
-public class Application {
+public class SpringSeleniumApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(SpringSeleniumApplication.class, args);
 	}
-
 }
